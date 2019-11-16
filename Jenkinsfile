@@ -24,9 +24,9 @@ pipeline {
           }
         }
 
-        stage('Docker version') {
+        stage('Verify Step') {
           steps {
-            bat(script: 'docker --version', returnStatus: true)
+            input(message: 'Finished using the web site? (Click "Proceed" to continue)', id: '1')
           }
         }
 

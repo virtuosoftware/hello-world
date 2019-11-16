@@ -12,7 +12,7 @@ pipeline {
         CI = 'true'
       }
       steps {
-        bat(script: 'dir c:\\windows pause', returnStatus: true, returnStdout: true)
+        bat(script: 'dir c:\\windows', returnStatus: true, returnStdout: true)
       }
     }
 

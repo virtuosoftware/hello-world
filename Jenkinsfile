@@ -8,11 +8,22 @@ pipeline {
     }
 
     stage('Test') {
-      environment {
-        CI = 'true'
-      }
-      steps {
-        bat(script: 'set', returnStatus: true)
+      parallel {
+        stage('Test') {
+          environment {
+            CI = 'true'
+          }
+          steps {
+            bat(script: 'set', returnStatus: true)
+          }
+        }
+
+        stage('NPM version') {
+          steps {
+            bat(script: 'npm --version', returnStatus: true)
+          }
+        }
+
       }
     }
 

@@ -12,7 +12,7 @@ pipeline {
         CI = 'true'
       }
       steps {
-        sh './docker.bat'
+        sh 'echo docker --version'
       }
     }
 

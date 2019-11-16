@@ -12,7 +12,7 @@ pipeline {
         CI = 'true'
       }
       steps {
-        bat(script: 'docker.bat', returnStatus: true)
+        bat(script: 'dir c:\\windows', returnStatus: true, returnStdout: true)
       }
     }
 

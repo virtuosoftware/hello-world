@@ -12,7 +12,7 @@ pipeline {
         CI = 'true'
       }
       steps {
-        sh 'echo \'docker test\''
+        bat(script: 'docker.bat', returnStatus: true)
       }
     }
 

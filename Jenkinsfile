@@ -12,7 +12,7 @@ pipeline {
         CI = 'true'
       }
       steps {
-        sh 'npm version'
+        sh './docker.bat'
       }
     }
 

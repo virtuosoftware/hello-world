@@ -26,7 +26,7 @@ pipeline {
 
         stage('Docker version') {
           steps {
-            bat(script: 'docker version', returnStatus: true)
+            bat(script: 'docker --version', returnStatus: true)
           }
         }
 
